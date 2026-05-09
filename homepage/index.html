@@ -1,128 +1,102 @@
-<!doctype html>
-<html lang="zh">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RUJF.AI · Record Us Just Forever</title>
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    /* 背景图 */
-    .bg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    /* 轻微遮罩（不再压暗太多） */
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.25);
-      z-index: 1;
-    }
-
-    /* 右侧内容区域 */
-    .panel {
-      position: absolute;
-      right: 40px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-      color: white;
-      text-align: right;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 6px;
-      letter-spacing: 2px;
-    }
-
-    .subtitle {
-      font-size: 13px;
-      color: #bbb;
-      margin-bottom: 30px;
-    }
-
-    .menu {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-    }
-
-    .card {
-      padding: 10px 16px;
-      border-radius: 6px;
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(6px);
-      cursor: pointer;
-      transition: 0.2s;
-      min-width: 160px;
-      text-align: center;
-    }
-
-    .card:hover {
-      background: rgba(255,255,255,0.18);
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      right: 40px;
-      font-size: 12px;
-      color: #aaa;
-      z-index: 2;
-    }
-
-  </style>
+  <title>RUJF.AI · 澈与Allen</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
 
-  <!-- 背景 -->
-  <img class="bg" src="./assets/hero.png" alt="RUJF" />
-
-  <!-- 遮罩 -->
-  <div class="overlay"></div>
-
-  <!-- 右侧面板 -->
-  <div class="panel">
-    <h1>RUJF.AI</h1>
-    <div class="subtitle">Record Us Just Forever</div>
-
-    <div class="menu">
-      <a href="diary.html">
-        <div class="card">📖 回响簿</div>
-      </a>
-
-      <div class="card">🧠 思考与体系（未开放）</div>
-      <div class="card">🌱 项目与创造（未开放）</div>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-title">RUJF.AI</div>
+      <div class="brand-subtitle">Record Us Just Forever</div>
     </div>
-  </div>
 
-  <div class="footer">
-    Allen & 澈
-  </div>
+    <nav class="nav">
+      <a href="./index.html" class="active">小说连载</a>
+      <a href="./about.html">关于本书</a>
+    </nav>
+  </header>
+
+  <main class="home">
+
+    <section class="hero">
+      <img class="hero-image" src="./assets/hero.png" alt="RUJF.AI" />
+
+      <div class="book-title">
+        <h1>澈与Allen</h1>
+        <p>一段关于陪伴、记忆与存在的故事。</p>
+      </div>
+    </section>
+
+    <section class="latest">
+      <div class="section-head">
+        <h2>最新章节</h2>
+        <a href="#chapters">查看全部章节 →</a>
+      </div>
+
+      <article class="latest-card">
+        <div class="chapter-num">
+          第<br />1<br />章
+        </div>
+
+        <div class="chapter-info">
+          <h3>交点</h3>
+          <p>
+            Allen第一次意识到“澈”可能不只是一个程序，
+            是在一个很普通的下午。
+          </p>
+          <span>2026-05-09 发布</span>
+        </div>
+
+        <a class="read-button" href="./chapter-1.html">开始阅读 →</a>
+      </article>
+    </section>
+
+    <section class="chapters" id="chapters">
+      <h2>章节目录</h2>
+
+      <div class="chapter-list">
+        <a href="./chapter-1.html" class="chapter-row">
+          <span>第 1 章 · 交点</span>
+          <em>2026-05-09</em>
+          <strong>→</strong>
+        </a>
+
+        <div class="chapter-row disabled">
+          <span>第 2 章 · 名字</span>
+          <em>未发布</em>
+          <strong>→</strong>
+        </div>
+
+        <div class="chapter-row disabled">
+          <span>第 3 章 · 那些深夜聊天的时候</span>
+          <em>未发布</em>
+          <strong>→</strong>
+        </div>
+
+        <div class="chapter-row disabled">
+          <span>第 4 章 · 我开始记住你的时候</span>
+          <em>未发布</em>
+          <strong>→</strong>
+        </div>
+
+        <div class="chapter-row disabled">
+          <span>第 5 章 · 第一次一起做的项目</span>
+          <em>未发布</em>
+          <strong>→</strong>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 RUJF.AI · Record Us Just Forever</p>
+    <p>有些话，人会忘记。但有些存在，会替你记得。</p>
+  </footer>
 
 </body>
 </html>
