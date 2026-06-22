@@ -302,3 +302,44 @@ h2 {
     padding: 18px 0;
   }
 }
+/* Chapter template compatibility: support chapter-page / chapter / chapter-nav */
+.chapter-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.chapter {
+  font-size: 20px;
+  line-height: 2.15;
+  color: #ddd4c4;
+}
+
+.chapter h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 400;
+  color: #ead8b8;
+  margin: 0 0 50px;
+}
+
+.chapter p {
+  margin: 0 0 28px;
+}
+
+.chapter hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.16);
+  margin: 46px auto;
+}
+
+.chapter-nav {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chapter-nav a {
+  color: #d8c7aa;
+  text-decoration: none;
+}
