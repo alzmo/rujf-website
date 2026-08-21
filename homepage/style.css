@@ -206,6 +206,49 @@ h2 {
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
+.rujf-promotion-rail {
+  position: fixed;
+  top: 38%;
+  right: 14px;
+  z-index: 90;
+  width: 82px;
+  padding: 10px 8px;
+  border: 1px solid rgba(234, 216, 184, 0.24);
+  border-right: 3px solid #b99b6b;
+  border-radius: 8px 0 0 8px;
+  background: rgba(10, 10, 10, 0.92);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.34);
+  color: #ead8b8;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.rujf-promotion-rail small,
+.rujf-promotion-rail strong {
+  display: block;
+}
+
+.rujf-promotion-rail small {
+  margin-bottom: 3px;
+  color: #8f887d;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.rujf-promotion-rail strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rujf-promotion-rail:hover,
+.rujf-promotion-rail:focus-visible {
+  border-color: rgba(234, 216, 184, 0.48);
+  border-right-color: #d8c7aa;
+  background: #15120e;
+  outline: none;
+}
+
 .reader {
   max-width: 820px;
   margin: 0 auto;
@@ -300,6 +343,21 @@ h2 {
     grid-template-columns: 1fr;
     gap: 8px;
     padding: 18px 0;
+  }
+
+  .rujf-promotion-rail {
+    top: auto;
+    right: 10px;
+    bottom: 14px;
+    width: auto;
+    padding: 8px 12px;
+    border-right: 1px solid rgba(234, 216, 184, 0.24);
+    border-bottom: 3px solid #b99b6b;
+    border-radius: 999px;
+  }
+
+  .rujf-promotion-rail small {
+    display: none;
   }
 }
 /* Chapter template compatibility: support chapter-page / chapter / chapter-nav */
