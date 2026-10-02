@@ -78,23 +78,35 @@ Avoid:
 
 ## Serialization Workflow
 
+The novel is one continuous serialization, without volume/part groupings.
+Do not reintroduce volume headings, subtitles, or separate chapter-list groups.
+Keep existing chapter numbers, titles, prose, publication dates, and URLs.
+
 Every new chapter should:
 
-1. Create a new:
-   chapter-x.html
+1. Create matching Chinese and English pages:
+   homepage/chapter-x.html and homepage/en-chapter-x.html
 
-2. Update:
-   index.html
+2. Update both homepages:
+   homepage/index.html and homepage/en.html
 
 3. Maintain:
-- previous/next navigation
-- chapter directory
-- latest chapter section
+- one chapter directory per language, in ascending chapter order
+- the latest chapter card and the next unpublished chapter placeholder
+- previous/next navigation in both languages, including the former latest chapter
+- a directory link and matching language link wherever the template includes them
+- chapter headers with only the chapter title and publication date, without a volume label
 
 4. Preserve:
 - existing visual structure
 - existing typography
 - existing spacing style
+
+5. Before publishing, run:
+   python3 tests/validate_serialization.py
+
+   For a layout/navigation-only change, also prove existing story text is unchanged:
+   python3 tests/validate_serialization.py --baseline-ref <base-commit>
 
 ---
 
